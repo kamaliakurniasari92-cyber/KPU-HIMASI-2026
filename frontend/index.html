@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pemilihan HIMASI 2026</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- CONTAINER UTAMA -->
+    <!-- ================================= -->
+
+    <div class="container">
+
+
+        <!-- ================================= -->
+        <!-- HEADER -->
+        <!-- ================================= -->
+
+      <header>
+
+    <h1>
+        PEMILIHAN HIMASI 2026
+    </h1>
+
+    <p>
+        Hasil Perhitungan Suara
+    </p>
+
+    <div class="info-role">
+        <span id="labelRole"></span>
+        <button class="btn-keluar" onclick="keluar()">Keluar</button>
+    </div>
+
+</header>
+
+
+
+        <!-- ================================= -->
+        <!-- BAGIAN PASLON -->
+        <!-- ================================= -->
+
+        <div class="paslon-container">
+
+
+            <!-- ================================= -->
+            <!-- CARD PASLON 01 -->
+            <!-- ================================= -->
+
+            <div class="paslon-card">
+
+
+                <!-- Nomor Paslon -->
+
+                <div class="nomor">
+
+                    PASLON 01
+
+                </div>
+
+
+
+                <!-- Foto Paslon -->
+
+                <img
+                    src="paslon1.JPG"
+                    alt="Foto Paslon 01"
+                    class="foto-paslon"
+                >
+
+
+
+                <!-- Nama Paslon -->
+
+                <h2>
+
+                    Andriyan Paska Nanda
+
+                    <br>
+
+                    &
+
+                    <br>
+
+                    Keysha Ivan Nurinhadi
+
+                </h2>
+
+
+
+                <!-- Jumlah Suara -->
+
+                <div class="jumlah-suara">
+
+                    <span id="suara01">
+                        0
+                    </span>
+
+                    <p>
+                        SUARA
+                    </p>
+
+                </div>
+
+
+
+                <!-- Tombol -->
+
+                <div class="tombol-suara">
+
+
+                    <!-- Tombol Kurang -->
+
+                    <button
+                        class="btn-kurang"
+                        onclick="kurangiSuara(1)"
+                    >
+
+                        −
+
+                    </button>
+
+
+
+                    <!-- Tombol Tambah -->
+
+                    <button
+                        class="btn-tambah"
+                        onclick="tampilkanKonfirmasi(1)"
+                    >
+
+                        +1 SUARA
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- CARD PASLON 02 -->
+            <!-- ================================= -->
+
+            <div class="paslon-card">
+
+
+                <!-- Nomor Paslon -->
+
+                <div class="nomor">
+
+                    PASLON 02
+
+                </div>
+
+
+
+                <!-- Foto Paslon -->
+
+                <img
+                    src="paslon2.JPG"
+                    alt="Foto Paslon 02"
+                    class="foto-paslon"
+                >
+
+
+
+                <!-- Nama Paslon -->
+
+                <h2>
+
+                    Dzaky Hilmy Haidar
+
+                    <br>
+
+                    &
+
+                    <br>
+
+                    Sri Amanda Putri Ahmad
+
+                </h2>
+
+
+
+                <!-- Jumlah Suara -->
+
+                <div class="jumlah-suara">
+
+                    <span id="suara02">
+                        0
+                    </span>
+
+                    <p>
+                        SUARA
+                    </p>
+
+                </div>
+
+
+
+                <!-- Tombol -->
+
+                <div class="tombol-suara">
+
+
+                    <!-- Tombol Kurang -->
+
+                    <button
+                        class="btn-kurang"
+                        onclick="kurangiSuara(2)"
+                    >
+
+                        −
+
+                    </button>
+
+
+
+                    <!-- Tombol Tambah -->
+
+                    <button
+                        class="btn-tambah"
+                        onclick="tampilkanKonfirmasi(2)"
+                    >
+
+                        +1 SUARA
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- CARD DIAGRAM -->
+        <!-- ================================= -->
+
+        <div class="diagram-card">
+
+
+            <h2>
+
+                PERBANDINGAN HASIL SUARA
+
+            </h2>
+
+
+            <p class="diagram-subtitle">
+
+                Diagram Batang Perolehan Suara
+
+            </p>
+
+
+
+            <!-- Area Diagram -->
+
+            <div class="chart-container">
+
+                <canvas id="diagramSuara"></canvas>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- ================================= -->
+    <!-- POPUP KONFIRMASI -->
+    <!-- ================================= -->
+
+    <div
+        id="popupKonfirmasi"
+        class="popup-overlay"
+    >
+
+
+        <div class="popup-box">
+
+
+            <!-- ICON -->
+
+            <div
+                id="popupIcon"
+                class="popup-icon"
+            >
+
+                ?
+
+            </div>
+
+
+
+            <!-- JUDUL -->
+
+            <h2 id="judulKonfirmasi">
+
+                SUARA SAH?
+
+            </h2>
+
+
+
+            <!-- PESAN -->
+
+            <p id="pesanKonfirmasi">
+
+                Apakah suara untuk Paslon 01 sah?
+
+            </p>
+
+
+
+            <!-- TOMBOL -->
+
+            <div class="popup-buttons">
+
+
+                <!-- BATAL -->
+
+                <button
+                    class="btn-batal"
+                    onclick="tutupPopup()"
+                >
+
+                    BATAL
+
+                </button>
+
+
+
+                <!-- KONFIRMASI -->
+
+                <button
+                    id="btnKonfirmasi"
+                    class="btn-sah"
+                    onclick="konfirmasiAksi()"
+                >
+
+                    YA, SUARA SAH
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================= -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

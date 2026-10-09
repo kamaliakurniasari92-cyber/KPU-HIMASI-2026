@@ -1,0 +1,841 @@
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* ========================================= */
+/* BODY */
+/* ========================================= */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f3f7fc;
+
+    color: #333;
+
+    min-height: 100vh;
+
+}
+
+
+
+/* ========================================= */
+/* CONTAINER */
+/* ========================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 40px 50px 60px 50px;
+
+}
+
+
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+header h1 {
+
+    color: #1565c0;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+header p {
+
+    margin-top: 10px;
+
+    color: #666;
+
+    font-size: 18px;
+
+}
+
+
+
+/* ========================================= */
+/* BAGIAN PASLON */
+/* ========================================= */
+
+.paslon-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+}
+
+
+
+/* ========================================= */
+/* CARD PASLON */
+/* ========================================= */
+
+.paslon-card {
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 2px solid #e1ecf8;
+
+    box-shadow:
+        0 8px 25px rgba(21, 101, 192, 0.10);
+
+    transition: 0.3s;
+
+}
+
+
+.paslon-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(21, 101, 192, 0.15);
+
+}
+
+
+
+/* ========================================= */
+/* NOMOR PASLON */
+/* ========================================= */
+
+.nomor {
+
+    display: inline-block;
+
+    background-color: #1565c0;
+
+    color: white;
+
+    padding: 9px 25px;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* ========================================= */
+/* FOTO PASLON */
+/* ========================================= */
+
+.foto-paslon {
+
+    width: 210px;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 4px solid #e3eef9;
+
+    display: block;
+
+    margin: 0 auto 20px auto;
+
+}
+
+
+
+/* ========================================= */
+/* NAMA PASLON */
+/* ========================================= */
+
+.paslon-card h2 {
+
+    color: #1565c0;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    min-height: 90px;
+
+}
+
+
+
+/* ========================================= */
+/* JUMLAH SUARA */
+/* ========================================= */
+
+.jumlah-suara {
+
+    border-top: 2px solid #e5edf7;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+}
+
+
+.jumlah-suara span {
+
+    display: block;
+
+    color: #1565c0;
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+}
+
+
+.jumlah-suara p {
+
+    color: #777;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* ========================================= */
+/* TOMBOL SUARA */
+/* ========================================= */
+
+.tombol-suara {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+
+/* ========================================= */
+/* TOMBOL KURANG */
+/* ========================================= */
+
+.btn-kurang {
+
+    width: 60px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #e5eef8;
+
+    color: #1565c0;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-kurang:hover {
+
+    background-color: #d3e3f3;
+
+}
+
+
+
+/* ========================================= */
+/* TOMBOL TAMBAH */
+/* ========================================= */
+
+.btn-tambah {
+
+    flex: 1;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #1565c0;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-tambah:hover {
+
+    background-color: #0d47a1;
+
+}
+
+
+
+/* ========================================= */
+/* CARD DIAGRAM */
+/* ========================================= */
+
+.diagram-card {
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    border: 2px solid #e1ecf8;
+
+    box-shadow:
+        0 8px 25px rgba(21, 101, 192, 0.10);
+
+}
+
+
+.diagram-card h2 {
+
+    text-align: center;
+
+    color: #1565c0;
+
+    font-size: 24px;
+
+}
+
+
+.diagram-subtitle {
+
+    text-align: center;
+
+    color: #777;
+
+    margin-top: 8px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* ========================================= */
+/* CHART */
+/* ========================================= */
+
+.chart-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 400px;
+
+}
+
+
+
+/* ========================================= */
+/* POPUP OVERLAY */
+/* ========================================= */
+
+.popup-overlay {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 999;
+
+}
+
+
+
+/* ========================================= */
+/* POPUP BOX */
+/* ========================================= */
+
+.popup-box {
+
+    width: 90%;
+
+    max-width: 420px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.20);
+
+    animation: muncul 0.2s ease;
+
+}
+
+
+@keyframes muncul {
+
+    from {
+
+        transform: scale(0.85);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* ========================================= */
+/* ICON POPUP */
+/* ========================================= */
+
+.popup-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 0 auto 20px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: #e8f1fb;
+
+    color: #1565c0;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+
+/* ========================================= */
+/* JUDUL POPUP */
+/* ========================================= */
+
+.popup-box h2 {
+
+    color: #1565c0;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+/* ========================================= */
+/* PESAN POPUP */
+/* ========================================= */
+
+.popup-box p {
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* ========================================= */
+/* TOMBOL POPUP */
+/* ========================================= */
+
+.popup-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+
+/* ========================================= */
+/* BATAL */
+/* ========================================= */
+
+.btn-batal {
+
+    flex: 1;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #eeeeee;
+
+    color: #555;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-batal:hover {
+
+    background-color: #dddddd;
+
+}
+
+
+
+/* ========================================= */
+/* SUARA SAH */
+/* ========================================= */
+
+.btn-sah {
+
+    flex: 1;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #1565c0;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-sah:hover {
+
+    background-color: #0d47a1;
+
+}
+
+
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+
+    .container {
+
+        padding: 30px 20px 50px 20px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    header p {
+
+        font-size: 16px;
+
+    }
+
+
+    .paslon-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .paslon-card {
+
+        padding: 25px;
+
+    }
+
+
+    .foto-paslon {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+    .jumlah-suara span {
+
+        font-size: 48px;
+
+    }
+
+
+    .diagram-card {
+
+        padding: 20px;
+
+    }
+
+
+    .chart-container {
+
+        height: 300px;
+
+    }
+
+}
+
+/* ========================================= */
+/* ROLE & KELUAR */
+/* ========================================= */
+
+.info-role {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#labelRole {
+    background-color: #e8f1fb;
+    color: #1565c0;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-keluar {
+    border: 2px solid #1565c0;
+    background: white;
+    color: #1565c0;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-keluar:hover {
+    background-color: #e8f1fb;
+}
+
+/* Guest tidak melihat tombol plus minus */
+body.guest .tombol-suara {
+    display: none;
+}
+
+/* ========================================= */
+/* ADAPTIF HP */
+/* ========================================= */
+
+body {
+    overflow-x: hidden;
+}
+
+/* Layar sentuh: matikan efek hover naik pada kartu */
+@media (hover: none) {
+    .paslon-card:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px 14px 40px 14px;
+    }
+
+    header {
+        margin-bottom: 25px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .info-role {
+        flex-wrap: wrap;
+    }
+
+    .paslon-card {
+        padding: 20px 16px;
+    }
+
+    .nomor {
+        font-size: 14px;
+        padding: 8px 20px;
+        margin-bottom: 16px;
+    }
+
+    .foto-paslon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .paslon-card h2 {
+        font-size: 17px;
+        min-height: auto;
+    }
+
+    .jumlah-suara span {
+        font-size: 42px;
+    }
+
+    .btn-kurang {
+        width: 52px;
+        height: 48px;
+    }
+
+    .btn-tambah {
+        height: 48px;
+        font-size: 15px;
+    }
+
+    .diagram-card {
+        padding: 16px;
+        margin-top: 20px;
+    }
+
+    .diagram-card h2 {
+        font-size: 20px;
+    }
+
+    .chart-container {
+        height: 260px;
+    }
+
+    .popup-box {
+        padding: 25px 20px;
+    }
+
+    .popup-box h2 {
+        font-size: 21px;
+    }
+
+    /* Tombol popup ditumpuk, tombol konfirmasi di atas */
+    .popup-buttons {
+        flex-direction: column-reverse;
+    }
+}
