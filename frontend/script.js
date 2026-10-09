@@ -3,7 +3,7 @@
 /* ========================================= */
 
 // Saat tes lokal pakai localhost, setelah deploy ganti ke URL Railway (pakai https://)
-const API_URL = "http://localhost:3000";
+const API_URL = "https://kpu-himasi-2026-production.up.railway.app";
 
 
 /* ========================================= */
